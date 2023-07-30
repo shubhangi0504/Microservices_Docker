@@ -1,0 +1,80 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/User/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7124
+        }
+      ],
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "userService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7124
+        }
+      ],
+      "UpstreamPathTemplate": "/api/User",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "userService"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Product/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7033
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product",
+      "UpstreamHttpMethod": [ "GET" ],
+      "SwaggerKey": "productService"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7033
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "productService"
+    }
+  ],
+  "SwaggerEndPoints": [
+
+    {
+      "Key": "userService",
+      "Config": [
+        {
+          "Name": "User Service API",
+          "Version": "v1",
+          "Url": "https://localhost:7124/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "productService",
+      "Config": [
+        {
+          "Name": "Product Service API",
+          "Version": "v1",
+          "Url": "https://localhost:7033/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
